@@ -2,9 +2,22 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE844CA2-AA51-4B52-B927-4ECBC3A5F7EE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C31803CF-C5CA-4B53-90FC-16BA823C3691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquadGoals.ApiAuth", "SquadGoals.ApiAuth\SquadGoals.ApiAuth.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35DE8C49-8403-4906-988C-BAEB5A829546} = {FE844CA2-AA51-4B52-B927-4ECBC3A5F7EE}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35DE8C49-8403-4906-988C-BAEB5A829546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DE8C49-8403-4906-988C-BAEB5A829546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DE8C49-8403-4906-988C-BAEB5A829546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DE8C49-8403-4906-988C-BAEB5A829546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
