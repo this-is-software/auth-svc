@@ -4,7 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE844CA2-AA5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C31803CF-C5CA-4B53-90FC-16BA823C3691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquadGoals.ApiAuth", "SquadGoals.ApiAuth\SquadGoals.ApiAuth.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquadGoals.Api", "SquadGoals.Api\SquadGoals.Api.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
