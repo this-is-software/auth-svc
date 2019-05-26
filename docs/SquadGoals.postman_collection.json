@@ -20,6 +20,22 @@
 				"description": "Just building up a workflow for AZ Functions"
 			},
 			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "Just building up a workflow for AZ Functions"
+			},
+			"response": []
 		}
 	]
 }
