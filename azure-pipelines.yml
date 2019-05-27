@@ -10,11 +10,25 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: 'Debug'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- script: dotnet test -p:CollectCoverage=true --logger:trx
+- script: dotnet test -p:CollectCoverage=true --logger:trx -p:CoverletOutputFormat=cobertura
   displayName: 'dotnet test with coverage'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TestResults-*.trx'
+    mergeTestResults: true
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: 'ApiCallTests/coverage.cobertura.xml'
+
+variables:
+  buildConfiguration: 'Release'
