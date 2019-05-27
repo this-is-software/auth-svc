@@ -17,7 +17,7 @@ steps:
 - script: dotnet build --configuration $(debugConfiguration)
   displayName: 'dotnet build $(debugConfiguration)'
 
-- script: dotnet test -p:CollectCoverage=true --logger:trx -p:CoverletOutputFormat=cobertura
+- script: dotnet test -p:CollectCoverage=true --logger:trx -p:CoverletOutputFormat=cobertura -p:Exclude="[xunit.*]*"
   displayName: 'dotnet test with coverage'
 
 - task: PublishTestResults@2
