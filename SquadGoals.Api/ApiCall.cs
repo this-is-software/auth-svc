@@ -26,27 +26,20 @@ namespace SquadGoals.Api
             HttpRequest req, ILogger log)
         {
             log.LogInformation("Status - HTTP trigger");
-            
-            var pronouns = new Dictionary<string, string>();
-            pronouns.Add("subject", "she");
-            pronouns.Add("object", "her");
-            pronouns.Add("possesive", "hers");
 
             var user = new User()
             {
                 displayName = "Static Test User",
                 id = 10001,
-                pronouns = pronouns
+                pronouns = new Pronouns()
+                {
+                    Subject = "she",
+                    Object = "her",
+                    Possessive = "hers"
+                }
             };
             
             return new JsonResult(user);
         }
-    }
-
-    public struct User
-    {
-        public int id;
-        public string displayName;
-        public Dictionary<string, string> pronouns;
     }
 }
