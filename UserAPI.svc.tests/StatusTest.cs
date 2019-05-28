@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
-using SquadGoals.Api;
+using UserAPI.svc;
 
 namespace ApiCallTests
 {

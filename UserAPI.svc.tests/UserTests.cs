@@ -7,7 +7,7 @@ using System.Web.Http.Hosting;
 using Microsoft.Extensions.Logging;
 using Xunit;
 using Moq;
-using SquadGoals.Api;
+using UserAPI.svc;
 using ApiCallTests.TestUtilities;
 using Microsoft.AspNetCore.Mvc;
 

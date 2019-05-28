@@ -6,6 +6,8 @@
         <IsPackable>false</IsPackable>
 
         <OutputType>Library</OutputType>
+
+        <RootNamespace>ApiCallTests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,11 +20,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SquadGoals.Api\SquadGoals.Api.csproj" />
+      <Folder Include="TestResults" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="TestResults" />
+      <ProjectReference Include="..\UserAPI.svc\UserAPI.svc.csproj" />
     </ItemGroup>
 
 </Project>

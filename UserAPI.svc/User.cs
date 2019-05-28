@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace SquadGoals.Api
+namespace UserAPI.svc
 {
     public struct User
     {
