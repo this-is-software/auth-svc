@@ -4,9 +4,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE844CA2-AA5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C31803CF-C5CA-4B53-90FC-16BA823C3691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquadGoals.Api", "SquadGoals.Api\SquadGoals.Api.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI.svc", "UserAPI.svc\UserAPI.svc.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCallTests", "ApiCallTests\ApiCallTests.csproj", "{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAPI.svc.tests", "UserAPI.svc.tests\UserAPI.svc.tests.csproj", "{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +25,5 @@ Global
 		{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

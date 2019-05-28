@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <AzureFunctionsVersion></AzureFunctionsVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="host.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="local.settings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+      <_ResolveComReferenceCache Remove="obj\Release\netcoreapp2.1\UserAPI.svc.csproj.ResolveComReference.cache" />
+    </ItemGroup>
+    <ItemGroup>
+      <IntermediateAssembly Remove="obj\Release\netcoreapp2.1\UserAPI.svc.dll" />
+    </ItemGroup>
+    <ItemGroup>
+      <_DebugSymbolsIntermediatePath Remove="obj\Release\netcoreapp2.1\UserAPI.svc.pdb" />
+    </ItemGroup>
+    <ItemGroup>
+      <_DeploymentManifestEntryPoint Remove="obj\Release\netcoreapp2.1\UserAPI.svc.dll" />
+    </ItemGroup>
+    <ItemGroup>
+      <ApplicationManifest Remove="obj\Release\netcoreapp2.1\Native.UserAPI.svc.manifest" />
+    </ItemGroup>
+    <ItemGroup>
+      <DeployManifest Remove="obj\Release\netcoreapp2.1\UserAPI.svc.application" />
+    </ItemGroup>
+</Project>

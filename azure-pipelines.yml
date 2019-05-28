@@ -1,0 +1,47 @@
+# Build on Ubuntu
+# These scripts are written for bash and will likely not run in other shells
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  debugConfiguration: 'Debug'
+  releaseConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(debugConfiguration)
+  displayName: 'dotnet build $(debugConfiguration)'
+
+- script: dotnet test -p:CollectCoverage=true --logger:trx -p:CoverletOutputFormat=cobertura -p:Exclude="[xunit.*]*"
+  displayName: 'dotnet test with coverage'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TestResults/*.trx'
+    mergeTestResults: true
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: 'UserAPI.svc.tests/coverage.cobertura.xml'
+
+- script: dotnet build --configuration $(releaseConfiguration)  --output $(Build.BinariesDirectory)
+  displayName: 'dotnet build $(releaseConfiguration)'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'release'
+    publishLocation: 'Container'
