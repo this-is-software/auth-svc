@@ -27,9 +27,9 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: 'ApiCallTests/coverage.cobertura.xml'
+    summaryFileLocation: 'UserAPI.svc.tests/coverage.cobertura.xml'
 
-- script: dotnet build --configuration $(releaseConfiguration)
+- script: dotnet build --configuration $(releaseConfiguration)  --output $(Build.BinariesDirectory)
   displayName: 'dotnet build $(releaseConfiguration)'
 
 - task: ArchiveFiles@2
@@ -43,5 +43,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'release.zip'
+    ArtifactName: 'release'
     publishLocation: 'Container'
