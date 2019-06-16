@@ -38,5 +38,5 @@ If you need the .Net SDK and/or runtime, they can be downloaded from [Microsoft]
 
 From the CLI run `dotnet test`
 
-The tests are written in XUnit and should be detected correctly by testing extensions for VS Code. Ex. [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) 
+The tests are written in XUnit and should be detected correctly by IDEs. For VS Code, use [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) 
 
