@@ -2,7 +2,7 @@
 
 # UserAPI
 
-Backend API for the user domain. Responsible for things like user signup, personal info, maybe app settings.
+Azure Functions App. Backend API and services for the user domain. Responsible for things like user signup, personal info, maybe app settings.
 
 ## Usage
 
