@@ -1,10 +1,10 @@
-namespace UserAPI.svc
+namespace UserAPI.Svc
 {
     public struct User
     {
-        public int id;
-        public string displayName;
-        public Pronouns pronouns;
+        public int Id;
+        public string DisplayName;
+        public Pronouns Pronouns;
     }
 
     public struct Pronouns

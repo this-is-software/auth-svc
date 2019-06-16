@@ -4,19 +4,19 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 using System.Web.Http.Hosting;
-using Microsoft.Extensions.Logging;
-using Xunit;
-using Moq;
-using UserAPI.svc;
 using ApiCallTests.TestUtilities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Moq;
+using UserAPI.Svc;
+using Xunit;
 
 namespace ApiCallTests
 {
     public class UserTests
     {
         private Mock<ILogger> mockLogger;
-        
+
         public UserTests()
         {
             mockLogger = new Mock<ILogger>();
@@ -27,17 +27,17 @@ namespace ApiCallTests
         {
             var expected = new User()
             {
-                displayName = "Static Test User",
-                id = 10001,
-                pronouns = new Pronouns()
+                DisplayName = "Static Test User",
+                Id = 10001,
+                Pronouns = new Pronouns()
                 {
                     Subject = "she",
                     Object = "her",
-                    Possessive = "hers"
-                }
+                    Possessive = "hers",
+                },
             };
             var actual = ApiCall.GetUser(Http.CreateRequest(), mockLogger.Object) as JsonResult;
-            
+
             Assert.Equal(expected, actual.Value);
         }
     }

@@ -18,20 +18,20 @@ namespace ApiCallTests.TestUtilities
             {
                 Method = "Post",
                 ContentType = "application/json",
-                Body = new MemoryStream(Encoding.UTF8.GetBytes(json))
+                Body = new MemoryStream(Encoding.UTF8.GetBytes(json)),
             };
- 
+
             return request;
         }
-        
+
         public static HttpRequest CreateRequest()
         {
             var uri = new Uri("https://localhost");
             var request = new MockHttpRequest
             {
-                Method = "Get"
+                Method = "Get",
             };
- 
+
             return request;
         }
     }

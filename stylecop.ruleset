@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Common Rules for Squad Goals projects" ToolsVersion="16.0">
+    <Localization ResourceAssembly="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.dll"
+                  ResourceBaseName="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.Localized">
+        <Name Resource="HelloWorldRules_Name"/>
+        <Description Resource="HelloWorldRules_Description"/>
+    </Localization>
+    <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+        <Rule Id="SA1633" Action="None"/>
+        <Rule Id="SA0001" Action="None"/>
+        <Rule Id="SA1101" Action="None"/>
+        <Rule Id="SA1516" Action="None"/>
+    </Rules>
+</RuleSet>

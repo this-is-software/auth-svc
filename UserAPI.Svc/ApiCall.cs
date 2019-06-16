@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 
-namespace UserAPI.svc
+namespace UserAPI.Svc
 {
     public static class ApiCall
     {
@@ -14,10 +14,10 @@ namespace UserAPI.svc
             HttpRequest req, ILogger log)
         {
             log.LogInformation("Status - HTTP trigger");
-            
+
             return new OkObjectResult("Connected to API, status ok");
         }
-        
+
         [FunctionName("User")]
         public static IActionResult GetUser(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "user")]
@@ -27,16 +27,16 @@ namespace UserAPI.svc
 
             var user = new User()
             {
-                displayName = "Static Test User",
-                id = 10001,
-                pronouns = new Pronouns()
+                DisplayName = "Static Test User",
+                Id = 10001,
+                Pronouns = new Pronouns()
                 {
                     Subject = "she",
                     Object = "her",
-                    Possessive = "hers"
-                }
+                    Possessive = "hers",
+                },
             };
-            
+
             return new JsonResult(user);
         }
     }
