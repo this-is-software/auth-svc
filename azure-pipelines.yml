@@ -27,7 +27,7 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: 'UserAPI.svc.tests/coverage.cobertura.xml'
+    summaryFileLocation: 'UserAPI.Svc.Tests/coverage.cobertura.xml'
 
 - script: dotnet build --configuration $(releaseConfiguration)  --output $(Build.BinariesDirectory)
   displayName: 'dotnet build $(releaseConfiguration)'
