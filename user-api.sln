@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE844CA2-AA5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C31803CF-C5CA-4B53-90FC-16BA823C3691}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.svc", "UserAPI.svc\UserAPI.svc.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.Svc", "UserAPI.Svc\UserAPI.Svc.csproj", "{35DE8C49-8403-4906-988C-BAEB5A829546}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.svc.tests", "UserAPI.svc.tests\UserAPI.svc.tests.csproj", "{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI.Svc.Tests", "UserAPI.Svc.tests\UserAPI.Svc.Tests.csproj", "{D77C319B-22E5-4BFD-B05D-80B0FD0EFDEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDDA61B7-4B8D-45A5-A959-E86CF092F132}"
 	ProjectSection(SolutionItems) = preProject
