@@ -7,11 +7,6 @@ namespace ApiCallTests.TestUtilities
 {
     public class MockHttpRequest : HttpRequest
     {
-        public override Task<IFormCollection> ReadFormAsync(CancellationToken cancellationToken = new CancellationToken())
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override HttpContext HttpContext { get; }
         public override string Method { get; set; }
         public override string Scheme { get; set; }
@@ -29,5 +24,11 @@ namespace ApiCallTests.TestUtilities
         public override Stream Body { get; set; }
         public override bool HasFormContentType { get; }
         public override IFormCollection Form { get; set; }
+
+        public override Task<IFormCollection> ReadFormAsync(
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

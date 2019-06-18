@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0b820e66-6cd0-4e8f-80fd-a972a3d8d742",
+		"_postman_id": "d22b7b4c-5ec2-4b67-a826-22bf34d7bad1",
 		"name": "SquadGoals",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,13 +9,23 @@
 			"name": "status",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "{{hostKey}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://{{env}}/api/status",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"status"
+					]
 				},
 				"description": "Just building up a workflow for AZ Functions"
 			},
@@ -25,13 +35,29 @@
 			"name": "user",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "{{hostKey}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://{{env}}/api/user",
+					"protocol": "http",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
 				},
 				"description": "Just building up a workflow for AZ Functions"
 			},

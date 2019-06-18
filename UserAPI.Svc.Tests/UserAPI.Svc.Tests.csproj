@@ -10,11 +10,16 @@
         <RootNamespace>ApiCallTests</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>..\stylecop.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="coverlet.msbuild" Version="2.6.1" />
         <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
         <PackageReference Include="Moq" Version="4.10.1" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
         <PackageReference Include="xunit" Version="2.4.0" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     </ItemGroup>
@@ -24,7 +29,17 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UserAPI.svc\UserAPI.svc.csproj" />
+      <ProjectReference Include="..\UserAPI.Svc\UserAPI.Svc.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <AdditionalFiles Include="..\stylecop.json">
+            <Link>stylecop.json</Link>
+        </AdditionalFiles>
+    </ItemGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="..\stylecop.ruleset">
+            <Link>stylecop.ruleset</Link>
+        </AdditionalFiles>
+    </ItemGroup>
 </Project>
